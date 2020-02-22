@@ -13,6 +13,8 @@ class SearchApi {
 
     }
 
+
+
     searchMovies(queryString) {
         let url = this._createUrl(queryString)
         return fetch(url)
