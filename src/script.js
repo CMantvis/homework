@@ -1,6 +1,6 @@
 const inputElement = document.querySelector(".searchTerm");
 const buttonElement = document.querySelector(".searchButton");
-const test = document.querySelector(".test")
+const dropdown = document.getElementById("dropdown")
 
 function sortByScore(a, b) {
     return b.popularity - a.popularity
@@ -36,20 +36,39 @@ class SearchApi {
 let searchService = new SearchApi()
 
 inputElement.onkeydown = function () {
+    dropdown.innerHTML=""
     const value = this.value;
     if (value.length >= 3) {
         searchService.searchMovies(value).then(movies => {
             movieList = movies.sort(sortByScore)
-            const html = movieList.map(movie => {
-                return `
-                <p>movies title: ${movie.title}, ${movie.vote_average}, ${[...movie.release_date].splice(0, 4).join("")}</p>
-                `
-            }).splice(0, 8)
-            test.innerHTML = html
+            movieList.splice(0, 8).forEach(movie => {
+                const option = movieOption(movie)
+                dropdown.appendChild(option)
+            })
+
         })
     }
     else {
-        test.innerHTML = `<p>this was deleted</p>`
+        dropdown.innerHTML = `<p>this was deleted</p>`
     }
 }
 
+// window.addEventListener("click", (e) => {
+//     if(!event.target.matches("#dropdown")) {
+//     dropdown.classList.remove("show")
+//     }
+
+// })
+
+function movieOption(movie) {
+    let content = document.createElement("div")
+    let movieName = document.createElement("div")
+    movieName.classList.add("title")
+    movieNameContent = document.createTextNode(`${movie.title}`)
+    movieName.appendChild(movieNameContent)
+    content.appendChild(movieName)
+    let rating = document.createElement("div")
+    rating.classList.add("rating")
+    content.appendChild(rating)
+    return content
+}
