@@ -25,8 +25,9 @@
 
                 </div>
               
-                <input class="searchTerm" type="text" placeholder="Enter movie name" autofocus>
-          
+                <input class="searchTerm" type="text" placeholder="Enter movie name" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Enter movie name'" />>
+                <div class="textholder">Enter a movie name</div>
                 <button type="submit" class="searchButton">
                     <svg width="40" height="40" viewBox="0 0 92 92" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -36,7 +37,7 @@
             </div>
         </div>
         <div class="content">
-            <p class="test">info</p>
+            
         </div>
     </div>
 

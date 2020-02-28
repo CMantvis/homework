@@ -31,7 +31,7 @@ body {
 }
 
 .autocomplete-field {
-height: 40px;
+height: 45px;
 display: flex;
 position: relative;
 }
@@ -43,17 +43,44 @@ position: relative;
     background-color: orange;
     background-color: rgba(255,255,255,0.2);
     border: none;
-    
+    position: relative;
     
 }
 
+.textholder {
+    position: absolute;
+    left: 5.4%;
+    top: 22px;
+    font-size: 0.7rem;
+    padding-top: 10px;
+    color: grey;
+    font-weight: 200;
+    text-indent: 50px;
+    display: none;
+}
+
+.showing {
+    background-color: #ffffff;
+    color: black;
+    margin-right: -44px;
+    font-weight: 500;
+    font-size: 17px;
+    background-image: url("C:/Users/Vartotojas/Desktop/website/homework/icons/movie.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-x: 15px;
+    background-position-y: center;
+    text-indent: 50px;
+    border-bottom: 1px gray solid;
+    
+}
 .searchTerm:focus {
     outline-width: 0;
 }
 
 .searchButton {
     width:40px; 
-    height:40px; 
+    height:45px; 
     border: 0;
     margin-left: 4px;
     background-color: #ffffff;
@@ -86,13 +113,13 @@ position: relative;
 
 #dropdown.show {
     position: absolute;
-    border: 1px solid #d4d4d4;
+    /* border: 1px solid #d4d4d4; */
     border-bottom: none;
     border-top: none;
     z-index: 99;
     /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
-    left: 0;
+    left: 5px;
     right: 0;
     background-color: white;
     margin-left: 35px;
@@ -100,23 +127,26 @@ position: relative;
     
 }
 
-#dropdown.wat {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    margin-left: 35px;
-    display: block;
-    
-}
+
+/* .autocomplete {
+    position: relative;
+    display: inline-block;
+} */
+
+.dropdown-item {
+
+    padding: 15px 50px;
+    color: rgb(45,45,45);
 }
 
+.dropdown-item .title {
+    
+    font-weight: 600;
+}
+
+.dropdown-item .rating {
+    font-size: 12px;
+}
 /* .autocomplete {
     position: relative;
     display: inline-block;
