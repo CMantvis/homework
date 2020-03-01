@@ -16,24 +16,21 @@ body {
 }
 
 .container {
-    
     width: 768px;
     height: 70px;
     margin: auto;
-   
 }
 
 .header {
-    background: rgb(241,107,40);
-    background: linear-gradient(90deg, rgba(241,107,40,1) 22%, rgba(241,107,40,1) 38%, rgba(223,67,47,0.9923319669664741) 65%, rgba(231,56,35,1) 100%);
+    background: rgb(241, 107, 40);
+    background: linear-gradient(90deg, rgba(241, 107, 40, 1) 22%, rgba(241, 107, 40, 1) 38%, rgba(223, 67, 47, 0.9923319669664741) 65%, rgba(231, 56, 35, 1) 100%);
     padding: 20px 15px;
-    
 }
 
 .autocomplete-field {
-height: 45px;
-display: flex;
-position: relative;
+    height: 45px;
+    display: flex;
+    position: relative;
 }
 
 .searchTerm {
@@ -41,15 +38,14 @@ position: relative;
     height: 100%;
     color: #ffffff;
     background-color: orange;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     border: none;
     position: relative;
-    
 }
 
 .textholder {
     position: absolute;
-    left: 5.4%;
+    left: 40px;
     top: 22px;
     font-size: 0.7rem;
     padding-top: 10px;
@@ -72,30 +68,31 @@ position: relative;
     background-position-y: center;
     text-indent: 50px;
     border-bottom: 1px gray solid;
-    
 }
+
 .searchTerm:focus {
     outline-width: 0;
 }
 
 .searchButton {
-    width:40px; 
-    height:45px; 
+    width: 40px;
+    height: 45px;
     border: 0;
     margin-left: 4px;
     background-color: #ffffff;
 }
 
 .searchButton svg {
-    fill: rgb(231,57,35);
+    fill: rgb(231, 57, 35);
     height: 24px;
     margin-top: 6px;
 }
 
 .image-icon {
     padding: 10px 5px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
+
 .image-icon svg {
     fill: #ffffff;
     height: 20px;
@@ -113,7 +110,6 @@ position: relative;
 
 #dropdown.show {
     position: absolute;
-    /* border: 1px solid #d4d4d4; */
     border-bottom: none;
     border-top: none;
     z-index: 99;
@@ -124,33 +120,21 @@ position: relative;
     background-color: white;
     margin-left: 35px;
     display: block;
-    
 }
 
-
-/* .autocomplete {
-    position: relative;
-    display: inline-block;
-} */
-
 .dropdown-item {
-
     padding: 15px 50px;
-    color: rgb(45,45,45);
+    color: rgb(45, 45, 45);
 }
 
 .dropdown-item .title {
-    
     font-weight: 600;
 }
 
 .dropdown-item .rating {
     font-size: 12px;
 }
-/* .autocomplete {
-    position: relative;
-    display: inline-block;
-} */
+
 
 @media (max-width:768px) {
     .container {
